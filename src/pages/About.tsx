@@ -1,4 +1,3 @@
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -28,9 +27,8 @@ const About = () => {
   const opacity3 = useTransform(scrollY, [vh * 0.2, vh * 0.5], [0, 1]);
 
   return (
-    <section className="relative flex h-screen w-full items-center overflow-hidden bg-white px-6 py-12 font-sans text-black md:px-10 lg:px-16">
-      <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 items-start gap-8 md:grid-cols-12 md:gap-x-10 lg:gap-x-14">
-
+    <section className="relative flex min-h-screen w-full items-center overflow-x-hidden bg-white px-5 py-20 font-sans text-black sm:px-6 md:h-screen md:min-h-0 md:overflow-hidden md:px-10 md:py-12 lg:px-16">
+      <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-x-10 lg:gap-x-14">
         {/* Left Column — About Me */}
         <motion.div
           className="md:col-span-3"
@@ -55,7 +53,6 @@ const About = () => {
 
         {/* Right Content */}
         <div className="flex min-w-0 flex-col gap-5 md:col-span-9 lg:gap-6">
-
           {/* Introduction */}
           <motion.div
             style={{ y: y2, opacity: opacity2 }}
@@ -68,9 +65,7 @@ const About = () => {
             <h2 className="text-3xl font-bold leading-[1.02] tracking-[-0.055em] sm:text-4xl md:text-5xl lg:text-[3.5rem]">
               Engineering mindset.
               <br />
-              <span className="text-black/35">
-                Developer by practice.
-              </span>
+              <span className="text-black/35">Developer by practice.</span>
             </h2>
 
             <p className="max-w-2xl text-sm leading-relaxed text-black/65 md:text-base">
@@ -85,8 +80,7 @@ const About = () => {
           <div className="h-px w-full bg-black/15" />
 
           {/* Education + DSA */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">
-
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8">
             {/* Education */}
             <motion.div
               style={{ y: y3, opacity: opacity3 }}
@@ -110,9 +104,7 @@ const About = () => {
                     Graduation
                   </p>
 
-                  <p className="mt-1 text-sm font-semibold">
-                    2024 — 2028
-                  </p>
+                  <p className="mt-1 text-sm font-semibold">2024 — 2028</p>
                 </div>
 
                 <div className="h-10 w-px bg-black/15" />
@@ -139,12 +131,10 @@ const About = () => {
                 03 / The Grind
               </p>
 
-              <h3 className="text-3xl font-bold leading-[1.02] tracking-[-0.045em] lg:text-4xl">
+              <h3 className="text-3xl font-bold leading-[1.02] tracking-[-0.045em] sm:text-4xl lg:text-4xl">
                 Consistency is
                 <br />
-                <span className="text-black/35">
-                  the real flex.
-                </span>
+                <span className="text-black/35">the real flex.</span>
               </h3>
 
               <p className="max-w-sm text-sm leading-relaxed text-black/60">

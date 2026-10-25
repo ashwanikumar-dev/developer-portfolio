@@ -24,7 +24,7 @@ const projects = [
     description:
       "Viora primarily targets developers, startups, and small-to-medium-sized teams who need a centralized platform to manage projects, organize tasks, collaborate within workspaces, and track progress efficiently.",
     links: {
-      live: "https://project-msg-server.vercel.app",
+      live: "https://viora-workspace.vercel.app",
       code: "https://github.com/ashwanikumar-dev/Viora",
     },
     image: "/dashboard.png",
@@ -77,17 +77,33 @@ const ScrollStackCard = ({ project, index }: ScrollStackCardProps) => {
           </div>
         </div>
 
-        <StarBorder
-          as="a"
-          href={project.links.live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="live-btn-star"
-          color="#f6d365, #fda085"
-          speed="3s"
-        >
-          {project.cta}
-        </StarBorder>
+        <div className="flex flex-wrap items-center gap-2">
+          <StarBorder
+            as="a"
+            href={project.links.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-btn-star"
+            color="#f6d365, #fda085"
+            speed="3s"
+          >
+            Live Project
+          </StarBorder>
+
+          {project.links.code && project.links.code !== "#" && (
+            <StarBorder
+              as="a"
+              href={project.links.code}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="live-btn-star"
+              color="#00f2fe, #4facfe"
+              speed="3s"
+            >
+              View on GitHub
+            </StarBorder>
+          )}
+        </div>
       </div>
 
       <div className="content-grid">
